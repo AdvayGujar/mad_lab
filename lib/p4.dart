@@ -56,33 +56,25 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Mad Lab App'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              Icons.favorite,
-              size: 100,
-              color: Colors.red,
+      body: ListView(
+        padding: EdgeInsets.all(20),
+        children: <Widget>[
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Card 1'),
+              subtitle: Text('Description of Card 1'),
             ),
-            SizedBox(height: 20),
-            Image.asset(
-              '/Users/advayvinodgujar/AndroidStudioProjects/mad_lab/lib/Resources/Indian-Institute-of-Science-Bangalore-Campus-View.jpg',
-              width: 200,
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text('Card 2'),
+              subtitle: Text('Description of Card 2'),
             ),
-            SizedBox(height: 20),
-            Text(
-              'Welcome to my app!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
-                color: Colors.blue,
-                fontFamily: 'Roboto',
-              ),
-            ),
-          ],
-        ),
+          ),
+          // Add more cards as needed
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
